@@ -47,5 +47,5 @@ jobs:
       uses: peter-evans/repository-dispatch@v3
       with:
         token: ${{ secrets.REPO_ACCESS_TOKEN }}
-        repository: dvbzk/testing-hub`
+        repository: dvbzk/testing-hub
         event-type: deploy-success
