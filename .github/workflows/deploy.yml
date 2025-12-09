@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Змініть на вашу гілку, якщо потрібно
+      - main
 
 permissions:
   contents: read
@@ -18,7 +18,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '24'  # Або версія, яку використовуєте
+          node-version: '24'
       - name: Install dependencies
         run: npm ci
       - name: Build
@@ -26,7 +26,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist  # Для Vite зазвичай dist, перевірте в vite.config.js
+          path: dist
 
   deploy:
     environment:
